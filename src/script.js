@@ -1,4 +1,3 @@
-/* global kirkiSetSettingValue */
 jQuery( document ).ready( function() {
 
 	// Loop Controls.
@@ -21,7 +20,7 @@ jQuery( document ).ready( function() {
 							_.each( preset.settings, function( controlValue, controlID ) {
 
 								// Set the value.
-								kirkiSetSettingValue.set( controlID, controlValue );
+								wp.customize( controlID, controlValue );
 							} );
 						}
 					} );
